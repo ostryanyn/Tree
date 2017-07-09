@@ -27,11 +27,10 @@ function grow(&$branch, $nottree) {
 //create treeroot
 $tree = array();
 $tree['id'] = 0;
-$tree['name'] = 'treeroot';
+$tree['name'] = 'treeroot (read-only)';
 
 //grow tree
 grow($tree, $nottree);
-
 
 echo '['.json_encode($tree).']';
 ?>

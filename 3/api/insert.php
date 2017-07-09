@@ -2,12 +2,12 @@
 error_reporting(E_ALL);
 ?>
 <?php
+include 'functions.php';
+
 $db = new SQLite3('../db/tree.db');
 
-if(    isset($_GET['branch_name'])
-	&& !empty($_GET['branch_name'])
-	&& isset($_GET['parent_id'])
-	&& !empty($_GET['parent_id'])) {
+if( isSetAndNotEmpty($_GET['branch_name'])
+	&& isSetAndNotEmpty($_GET['parent_id']) ) {
 
 	$branch_name = $_GET['branch_name'];
 	$parent_id = $_GET['parent_id'];

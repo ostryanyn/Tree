@@ -1,3 +1,8 @@
+.branch .lead { cursor: pointer; }
+
+.transparent { opacity: 0; }
+.glyphicon { cursor: pointer; }
+
 .dndDraggingSource {
 	display: none;
 }

@@ -115,16 +115,14 @@ myApp.component('tree', {
 				dnd-moved="$ctrl.array.splice($index, 1)"
 				dnd-inserted="$ctrl.updateBranchParentID(item, branch.id)"
 			>
-				<div
+				<div class="branch"
 					ng-mouseleave="showActions=false"
 				>
-					<a role="button" class="lead"
-						ng-show="branch.branch.length > 0"
+					<span class="glyphicon" aria-hidden="true"
+						ng-class="{'glyphicon-triangle-right': childrenAreHidden,'glyphicon-triangle-bottom': !childrenAreHidden,'transparent':!(branch.branch.length > 0)}"
 						ng-init="childrenAreHidden=false"
 						ng-click="childrenAreHidden=!childrenAreHidden"
-					>
-						{{childrenAreHidden ? '+' : '-'}}
-					</a>
+					></span>
 					<span class="lead"
 						ng-show="!nameIsEditable"
 						ng-mouseover="showActions=true"
