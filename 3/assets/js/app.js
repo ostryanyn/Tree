@@ -2,9 +2,6 @@ var myApp = angular.module('myApp', ['dndLists']);
 
 myApp.controller('myController', function treeController($scope, $http) {
 
-	// global SCOPE for debug purposes
-	SCOPE = $scope;
-
 	// tree array with branches
 	$scope.data = null;
 
