@@ -1,0 +1,7 @@
+.dndDraggingSource {
+	display: none;
+}
+.dndPlaceholder { display: none }
+.dndDragover {
+	outline: 2px dashed #777;
+}
