@@ -14,7 +14,7 @@
 	<body>
 		<div class="container" ng-controller="myController as ctrl">
 			<h1>Tree</h1>
-			<tree class="tree" array="data"></tree>
+			<tree array="data"></tree>
 		</div>
 	</body>
 </html>

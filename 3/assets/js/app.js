@@ -107,7 +107,7 @@ myApp.component('tree', {
 		this.updateBranchParentID = updateBranchParentID;
 	},
 	template: `
-		<ul style="list-style-type: none">
+		<ul class="tree">
 			<li data-ng-repeat="branch in $ctrl.array"
 				dnd-list="branch.branch"
 				dnd-draggable="branch"
@@ -132,6 +132,7 @@ myApp.component('tree', {
 					</span>
 					<input
 						ng-show="nameIsEditable"
+						ng-focus="nameIsEditable"
 						ng-init="newName=branch.name"
 						ng-model="newName"
 						ng-blur="$ctrl.updateBranchName(newName, branch); nameIsEditable=false"
