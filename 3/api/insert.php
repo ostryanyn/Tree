@@ -7,7 +7,7 @@ include 'functions.php';
 $db = new SQLite3('../db/tree.db');
 
 if( isSetAndNotEmpty($_GET['branch_name'])
-	&& isSetAndNotEmpty($_GET['parent_id']) ) {
+	&& isset($_GET['parent_id']) ) {
 
 	$branch_name = $_GET['branch_name'];
 	$parent_id = $_GET['parent_id'];
