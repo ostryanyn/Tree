@@ -27,7 +27,7 @@ function grow(&$branch, $nottree) {
 //create treeroot
 $tree = array();
 $tree['id'] = 0;
-$tree['name'] = 'treeroot (read-only)';
+$tree['name'] = 'root container';
 
 //grow tree
 grow($tree, $nottree);
